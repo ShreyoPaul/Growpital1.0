@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body style="margin: 0;">
+    <div class=nav
+        style="font-size:21px;display:flex;flex-direction:row;list-style:none;text-align:left;width:100%;height:80px;justify-content:left;align-items:center;background-color:#17171A;color:white">
+        <li class="img" style="padding:0 40px" }>
+            <img src="./Pics/logo.png" alt="" />
+        </li>
+        <li class="item1" style="padding:0 40px">Home</li>
+        <li class="item2" style="padding:0 40px">About</li>
+        <li class="item3" style="padding:0 40px">Service</li>
+        <li class="item4" style="padding:0 40px">Conatct us</li>
+        <li class="icon1" style="padding:0 50px 0 340px;scale:1.3;color:#FFB200">
+            <i class="fa-regular fa-bell"></i>
+        </li>
+        <li class="icon2" style="padding:0 40px;scale:1.3;color:#FFB200">
+            <i class="fa-regular fa-circle-user"></i>
+        </li>
+    </div>
+
+    <div style="
+        background-color: #2a2d3c;
+        color: #aeafb1; width: 400px;
+        justify-content: center;
+        margin: 50px auto;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #191a21" ">
+        <div class=" container1" style=" display: flex; flex-direction: row" ">
+            <div class=" con11" style="width: 85%">
+        <div>Money added to wallet</div>
+        <div>from bank account</div>
+        <div style="color: white; font-size: 28px; font-weight: 600 "><i class="fa fa-indian-rupee-sign"
+                style=" scale: 0.7 "></i><span id="transactionamount" style="margin: 0.5%;"></span></div>
+        <div id="transactiondate"></div>
+    </div>
+    <div class="con12" style=" width: 15% ">
+        <img src="Pics/Screenshot (27).png" alt="" />
+    </div>
+    <div class="con13" style=" color: white; scale: 1.3 ">
+        <i class="fa fa-xmark" style="cursor:pointer"></i>
+    </div>
+    </div>
+    <div class="container2"
+        style=" align-items: center; margin:  5% auto; width: 385px; justify-content: left; display: flex; flex-direction: row; padding: 2.5%; background-color: #3d5a47; border-radius: 7px ">
+        <div class="tick" style=" margin: 0 6%; scale: 1.8; color: #66ba5e ">
+            <i class="fa-regular fa-circle-check"></i>
+        </div>
+        <div class="h">
+            <div class="h1" style=" color: white; font-size: 21px; font-weight: 600 ">
+                Transaction complete!
+            </div>
+            <div class="h2" style=" font-size: 17px ">
+                Tap to view the transaction
+            </div>
+        </div>
+    </div>
+    <div class="container3" style="border:1px solid #aeafb1;border-radius:10px;">
+        <div class="con31" style="display:flex;flex-direction:row;padding:4%;width:93%">
+            <div class="txt" style="margin-right:38%">
+                <div style="color:#febf32;font-size:18px">From</div>
+                <div style="font-size:22px;color:white;font-weight:600" id="sender"></div>
+                <div style="color:white;font-style:italic"><span id="bank"></span>, IFSC <span id="IFSC"></span></div>
+                <div style="color:white;font-style:italic">A/c No. <span id="accountno"></span></div>
+                <div id="transactiondate1"></div>            </div>
+            <div class="nm"
+                style="text-align:center;width:50px;height:50px;border-radius:50%;background-color:#272935;display:flex;justify-content:center;align-items:center">
+                <h2 style="justify-content:center;align-items:center;color:white">SM</h2>
+            </div>
+        </div>
+
+        <div class="con32" style="display:flex;flex-direction:row;padding:4%">
+            <div class="txt" style="margin-right:28%">
+                <div style="color:#febf32;font-size:18px">To</div>
+                <div style="font-size:22px;color:white;font-weight:600"><span id="reciever"></span></div>
+                <div style="color:white;font-style:italic"><span id="wallet"></span></div>
+                <div style="color:white;font-style:italic">Ref No. <span id="referenceno"></span></div>
+                <div id="transactiondate2"></div>
+            </div>
+            <div class="nm"
+                style="text-align:center;width:50px;height:50px;border-radius:50%;background-color:#272935;display:flex;justify-content:center;align-items:center">
+                <img src="Pics/Screenshot (28).png" alt="" />
+            </div>
+        </div>
+
+        <div class="con33" style="display:flex;flex-direction:column;padding:4%;color:white">
+            <div>Payment Method: <span id="paymentmethod"></span></div>
+            <div style="display:inline-flex">
+                <div>Transaction ID: <span id="transactionId"></span></div><i style="padding-left:4%;color:#febf32;font-size:20px"
+                    class="fa-regular fa-copy"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container4" style="display:flex;flex-direction:row;margin-top:5%;margin-left:25%">
+        <div class="help"
+            style="width:120px;cursor:pointer;background-color:#febf32;text-align:center;padding:3.5% ;color:black;font-size:17px;font-weight:600;border-radius:7px;margin-right:3%">
+            Help</div>
+        <div class="share"
+            style="width:120px;cursor:pointer;background-color:#242632;text-align:center;padding:3.5% ;font-size:17px;font-weight:600;border-radius:7px">
+            Share</div>
+    </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/c5a98fc836.js" crossorigin="anonymous"></script>
+    <script>
+        fetch("./data.json")
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            document.getElementById("sender").innerHTML += data.senderDetails.sender;
+            document.getElementById("bank").innerHTML += data.senderDetails.bank;
+            document.getElementById("IFSC").innerHTML += data.senderDetails.IFSC;
+            document.getElementById("reciever").innerHTML += data.recieverDetails.reciever;
+            document.getElementById("wallet").innerHTML += data.recieverDetails.wallet;
+            document.getElementById("referenceno").innerHTML += data.recieverDetails.referenceno;
+            document.getElementById("accountno").innerHTML += data.senderDetails.accountno;
+            document.getElementById("transactiondate1").innerHTML += data.senderDetails.transactiondate;
+            document.getElementById("transactiondate2").innerHTML += data.recieverDetails.transactiondate;
+            document.getElementById("transactiondate").innerHTML += data.transactiondate;
+            document.getElementById("transactionamount").innerHTML += data.transactionamount;
+            document.getElementById("paymentmethod").innerHTML += data.paymentmethod;
+            document.getElementById("transactionId").innerHTML += data.transactionId;
+        })
+    </script>
+</body>
+
+</html>
